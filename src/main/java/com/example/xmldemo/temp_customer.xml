@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="21.0.2" class="java.beans.XMLDecoder">
+ <object class="com.example.xmldemo.Customer">
+  <void property="email">
+   <string>john@example.com</string>
+  </void>
+  <void property="id">
+   <string>123</string>
+  </void>
+  <void property="name">
+   <string>John</string>
+  </void>
+ </object>
+</java>
