@@ -1,6 +1,6 @@
 # XMLDecoder Vulnerability Demonstration
 
-⚠️ **WARNING: This application is intentionally vulnerable and is for educational purposes only. Never deploy this to production or expose it to the internet.**
+**WARNING: This application is intentionally vulnerable and is for educational purposes only. Never deploy this to production or expose it to the internet.**
 
 ## Overview
 
@@ -79,7 +79,7 @@ curl -X POST http://localhost:8080/api/customer/safe-import \
 
 ### 3. Vulnerability Demonstrations
 
-⚠️ **These examples demonstrate the vulnerability - use only in isolated test environments**
+**These examples demonstrate the vulnerability - use only in isolated test environments**
 
 **Simple string creation:**
 ```bash
@@ -113,13 +113,13 @@ curl -X POST http://localhost:8080/api/customer/import \
 
 ### Safe vs. Unsafe XML Processing
 
-**❌ Unsafe (XMLDecoder):**
+**Unsafe (XMLDecoder):**
 ```java
 XMLDecoder decoder = new XMLDecoder(inputStream);
 Object obj = decoder.readObject(); // RCE vulnerability
 ```
 
-**✅ Safe (DocumentBuilder):**
+**Safe (DocumentBuilder):**
 ```java
 DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 Document doc = builder.parse(inputStream); // Just parses structure
@@ -176,10 +176,10 @@ src/main/java/com/example/xmldemo/
 
 ## Important Security Notes
 
-🚨 **Never deploy this code to production environments**
-🚨 **Run only on isolated, local systems**
-🚨 **Do not expose to external networks**
-🚨 **Use firewall rules to block external access to port 8080**
+**Never deploy this code to production environments**
+**Run only on isolated, local systems**
+**Do not expose to external networks**
+**Use firewall rules to block external access to port 8080**
 
 ## Further Reading
 
